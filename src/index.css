@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #0f380f;
+  color: #9bbc0f;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  touch-action: manipulation;
+}
+
+/* Pixel-perfect rendering */
+* {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f380f;
+  border: 2px solid #306230;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8bac0f;
+  border: 2px solid #306230;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9bbc0f;
+}
+
+/* Pixel button styles */
+.pixel-button {
+  @apply bg-retro-lightest text-retro-text font-pixel px-4 py-2 shadow-pixel cursor-pointer
+         transition-all duration-100 hover:shadow-none hover:translate-x-1 hover:translate-y-1
+         border-4 border-retro-text;
+}
+
+/* Pixel card styles */
+.pixel-card {
+  @apply bg-retro-light border-4 border-retro-lightest shadow-pixel-lg p-4;
+}
+
+/* Text glow effect */
+.text-glow {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
+
+/* Animation delays */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
