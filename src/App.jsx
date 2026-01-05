@@ -12,8 +12,8 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-retro-bg flex flex-col md:flex-row md:items-center md:justify-center p-2 sm:p-4">
-      <div className="w-full max-w-7xl h-auto md:h-[90vh] flex flex-col gap-2 sm:gap-4">
+    <div className="min-h-screen bg-retro-bg flex flex-col lg:flex-row lg:items-center lg:justify-center p-2 sm:p-4 lg:p-6">
+      <div className="w-full max-w-7xl h-auto lg:h-[90vh] flex flex-col lg:flex-row gap-2 sm:gap-4">
         {/* Sidebar Navigation */}
         <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
         

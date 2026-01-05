@@ -30,31 +30,31 @@ const SkillsSection = () => {
   ];
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 sm:space-y-6">
       {/* Title */}
       <div className="pixel-card">
-        <h2 className="text-retro-lightest text-xl mb-2 text-glow">
+        <h2 className="text-retro-lightest text-base sm:text-xl lg:text-2xl mb-2 text-glow">
           → SKILL TREE
         </h2>
         <div className="h-1 bg-retro-lightest"></div>
       </div>
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4">
         {skillCategories.map((category, idx) => (
           <div 
             key={idx} 
             className="pixel-card animate-slideInUp"
             style={{ animationDelay: `${idx * 0.1}s` }}
           >
-            <h3 className={`text-sm mb-3 ${category.color} flex items-center gap-2`}>
+            <h3 className={`text-xs sm:text-sm lg:text-base mb-3 ${category.color} flex items-center gap-2`}>
               <span>▶</span> {category.category}
             </h3>
             <div className="space-y-2">
               {category.skills.map((skill, skillIdx) => (
                 <div 
                   key={skillIdx}
-                  className="bg-retro-bg border-2 border-retro-lighter p-2 text-retro-lightest text-[10px] hover:border-retro-lightest transition-colors"
+                  className="bg-retro-bg border-2 border-retro-lighter p-2 sm:p-3 text-retro-lightest text-[10px] sm:text-xs hover:border-retro-lightest transition-colors"
                 >
                   <div className="flex items-center justify-between">
                     <span>• {skill}</span>
@@ -69,14 +69,14 @@ const SkillsSection = () => {
 
       {/* Learning Section */}
       <div className="pixel-card bg-retro-bg border-retro-lighter">
-        <h3 className="text-retro-lightest text-sm mb-3">
+        <h3 className="text-retro-lightest text-xs sm:text-sm lg:text-base mb-3">
           📚 CURRENTLY LEARNING
         </h3>
         <div className="flex flex-wrap gap-2">
           {['TypeScript', 'Next.js', 'GraphQL', 'Kubernetes'].map((item, idx) => (
             <span 
               key={idx}
-              className="bg-retro-light border-2 border-retro-lightest px-3 py-1 text-[10px] text-retro-lightest animate-pulse"
+              className="bg-retro-light border-2 border-retro-lightest px-2 sm:px-3 py-1 sm:py-2 text-[10px] sm:text-xs text-retro-lightest animate-pulse"
             >
               {item}
             </span>

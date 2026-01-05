@@ -39,10 +39,10 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 sm:space-y-6">
       {/* Title */}
       <div className="pixel-card">
-        <h2 className="text-retro-lightest text-xl mb-2 text-glow">
+        <h2 className="text-retro-lightest text-base sm:text-xl lg:text-2xl mb-2 text-glow">
           → CONTACT
         </h2>
         <div className="h-1 bg-retro-lightest"></div>
@@ -50,23 +50,23 @@ const ContactSection = () => {
 
       {/* Introduction */}
       <div className="pixel-card animate-slideInUp">
-        <h3 className="text-retro-lightest text-sm mb-3">
+        <h3 className="text-retro-lightest text-xs sm:text-sm lg:text-base mb-3">
           🎮 LET'S CONNECT!
         </h3>
-        <p className="text-retro-lightest text-[10px] leading-relaxed mb-4">
+        <p className="text-retro-lightest text-[10px] sm:text-xs leading-relaxed mb-4">
           I'm currently looking for new opportunities as a Full-Stack Developer.
           Feel free to reach out if you want to discuss projects, job opportunities,
           or just want to connect!
         </p>
-        <div className="bg-retro-bg border-2 border-green-400 p-3">
-          <p className="text-green-400 text-[10px] animate-pulse">
+        <div className="bg-retro-bg border-2 border-green-400 p-2 sm:p-3">
+          <p className="text-green-400 text-[10px] sm:text-xs animate-pulse">
             ● Available for hire • Open to remote work
           </p>
         </div>
       </div>
 
       {/* Contact Methods */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
         {contactMethods.map((contact, idx) => (
           <a
             key={idx}
@@ -77,18 +77,18 @@ const ContactSection = () => {
             style={{ animationDelay: `${idx * 0.1}s` }}
           >
             <div className="flex items-center gap-3">
-              <div className="text-2xl">
+              <div className="text-xl sm:text-2xl">
                 {contact.icon}
               </div>
               <div className="flex-1">
-                <p className="text-retro-lightest text-[8px] mb-1">
+                <p className="text-retro-lightest text-[8px] sm:text-[10px] mb-1">
                   {contact.label}
                 </p>
-                <p className="text-retro-lightest text-[10px] break-all">
+                <p className="text-retro-lightest text-[10px] sm:text-xs break-all">
                   {contact.value}
                 </p>
               </div>
-              <span className="text-retro-lightest text-xs">→</span>
+              <span className="text-retro-lightest text-xs sm:text-sm">→</span>
             </div>
           </a>
         ))}

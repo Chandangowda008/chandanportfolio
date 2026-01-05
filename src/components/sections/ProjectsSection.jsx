@@ -31,10 +31,10 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 sm:space-y-6">
       {/* Title */}
       <div className="pixel-card">
-        <h2 className="text-retro-lightest text-xl mb-2 text-glow">
+        <h2 className="text-retro-lightest text-base sm:text-xl lg:text-2xl mb-2 text-glow">
           → PROJECTS
         </h2>
         <div className="h-1 bg-retro-lightest"></div>
@@ -48,33 +48,33 @@ const ProjectsSection = () => {
           style={{ animationDelay: `${idx * 0.15}s` }}
         >
           {/* Project Header */}
-          <div className="flex items-start justify-between mb-3">
+          <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-3 gap-2">
             <div>
-              <h3 className="text-retro-lightest text-sm mb-1">
+              <h3 className="text-retro-lightest text-xs sm:text-sm lg:text-base mb-1">
                 🎮 {project.title}
               </h3>
-              <p className="text-blue-400 text-[10px]">
+              <p className="text-blue-400 text-[10px] sm:text-xs">
                 [{project.tech}]
               </p>
             </div>
-            <span className={`text-[10px] ${project.statusColor} animate-pulse`}>
+            <span className={`text-[10px] sm:text-xs ${project.statusColor} animate-pulse whitespace-nowrap`}>
               ● {project.status}
             </span>
           </div>
 
           {/* Description */}
-          <p className="text-retro-lightest text-[10px] mb-3 leading-relaxed">
+          <p className="text-retro-lightest text-[10px] sm:text-xs lg:text-sm mb-3 leading-relaxed">
             {project.description}
           </p>
 
           {/* Highlights */}
-          <div className="bg-retro-bg border-2 border-retro-lighter p-3">
-            <p className="text-retro-lightest text-[10px] mb-2">KEY FEATURES:</p>
-            <div className="space-y-1">
+          <div className="bg-retro-bg border-2 border-retro-lighter p-2 sm:p-3">
+            <p className="text-retro-lightest text-[10px] sm:text-xs mb-2">KEY FEATURES:</p>
+            <div className="space-y-1 sm:space-y-2">
               {project.highlights.map((highlight, hIdx) => (
                 <div 
                   key={hIdx}
-                  className="text-retro-lightest text-[10px] flex items-start gap-2"
+                  className="text-retro-lightest text-[10px] sm:text-xs flex items-start gap-2"
                 >
                   <span className="text-green-400">→</span>
                   <span>{highlight}</span>
@@ -87,7 +87,7 @@ const ProjectsSection = () => {
 
       {/* More Projects Indicator */}
       <div className="pixel-card bg-retro-bg border-retro-lighter text-center">
-        <p className="text-retro-lightest text-[10px]">
+        <p className="text-retro-lightest text-[10px] sm:text-xs">
           View more projects on GitHub →
         </p>
       </div>

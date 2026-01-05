@@ -36,27 +36,27 @@ const AchievementsSection = () => {
   ];
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 sm:space-y-6">
       {/* Title */}
       <div className="pixel-card">
-        <h2 className="text-retro-lightest text-xl mb-2 text-glow">
+        <h2 className="text-retro-lightest text-base sm:text-xl lg:text-2xl mb-2 text-glow">
           → ACHIEVEMENTS
         </h2>
         <div className="h-1 bg-retro-lightest"></div>
       </div>
 
       {/* Stats Overview */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
         {stats.map((stat, idx) => (
           <div 
             key={idx}
             className="pixel-card text-center animate-slideInUp"
             style={{ animationDelay: `${idx * 0.1}s` }}
           >
-            <p className={`text-2xl font-bold ${stat.color} mb-1`}>
+            <p className={`text-xl sm:text-2xl font-bold ${stat.color} mb-1`}>
               {stat.value}
             </p>
-            <p className="text-retro-lightest text-[8px]">
+            <p className="text-retro-lightest text-[8px] sm:text-[10px]">
               {stat.label}
             </p>
           </div>
@@ -64,7 +64,7 @@ const AchievementsSection = () => {
       </div>
 
       {/* Achievements List */}
-      <div className="space-y-3">
+      <div className="space-y-3 sm:space-y-4">
         {achievements.map((achievement, idx) => (
           <div 
             key={idx}
@@ -73,21 +73,21 @@ const AchievementsSection = () => {
           >
             <div className="flex items-start gap-3">
               {/* Icon */}
-              <div className="text-3xl flex-shrink-0">
+              <div className="text-2xl sm:text-3xl flex-shrink-0">
                 {achievement.icon}
               </div>
               
               {/* Content */}
               <div className="flex-1">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-retro-lightest text-sm">
+                <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-2 gap-2">
+                  <h3 className="text-retro-lightest text-xs sm:text-sm lg:text-base">
                     {achievement.title}
                   </h3>
-                  <span className="text-yellow-400 text-[10px] bg-retro-bg border-2 border-yellow-400 px-2 py-1">
+                  <span className="text-yellow-400 text-[10px] sm:text-xs bg-retro-bg border-2 border-yellow-400 px-2 py-1 whitespace-nowrap">
                     +{achievement.points} XP
                   </span>
                 </div>
-                <p className="text-retro-lightest text-[10px] leading-relaxed">
+                <p className="text-retro-lightest text-[10px] sm:text-xs leading-relaxed">
                   {achievement.description}
                 </p>
               </div>
