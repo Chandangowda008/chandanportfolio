@@ -1,7 +1,7 @@
 import React from 'react';
 import { play8BitSound } from '../utils/soundEffects';
 
-const Sidebar = ({ activeSection, setActiveSection }) => {
+const Sidebar = ({ activeSection, setActiveSection, onReturnToLanding }) => {
   const menuItems = [
     { id: 'bio', label: 'BIO', icon: '👤' },
     { id: 'skills', label: 'SKILLS', icon: '⚡' },
@@ -47,7 +47,16 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
       </div>
 
       {/* Footer */}
-      <div className="p-2 sm:p-4 mt-2 sm:mt-4">
+      <div className="p-2 sm:p-4 mt-2 sm:mt-4 space-y-2">
+        <button
+          onClick={() => {
+            play8BitSound();
+            onReturnToLanding();
+          }}
+          className="w-full bg-retro-bg text-retro-lightest border-2 sm:border-4 border-retro-lightest p-2 text-[10px] sm:text-xs hover:bg-retro-lighter transition-all hover:shadow-pixel active:shadow-none touch-manipulation"
+        >
+          ← BACK TO START
+        </button>
         <div className="bg-retro-lightest border-2 sm:border-4 border-retro-text p-2 text-center">
           <p className="text-retro-text text-[8px] sm:text-[10px]">
             LEVEL 2026
